@@ -1,3 +1,4 @@
+from django.db import models
 from .cliente import Cliente
 
 class PessoaJuridica(Cliente):
