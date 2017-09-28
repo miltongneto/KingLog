@@ -1,9 +1,13 @@
 from .controladorCliente import ControladorCliente
 class Fachada(object):
 
+	controladorCliente = None
+
+	def __init__(self):
+		self.controladorCliente = ControladorCliente()
+
 	def cadastrarCliente(self, cliente):
 		print("Fachada " + cliente.nome)
-		controlador = ControladorCliente()
-		controlador.cadastrarCliente(cliente)
+		self.controladorCliente.cadastrarCliente(cliente)
 		
 

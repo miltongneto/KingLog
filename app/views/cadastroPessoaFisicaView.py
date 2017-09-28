@@ -11,9 +11,9 @@ def cadastrarPessoaFisica(request):
 		form = PessoaFisicaForm(request.POST)
 		if form.is_valid():
 			cliente = form.save(commit = False)
-			print(cliente.nome)
+			print(cliente.cpf)
 			#fachada = Fachada()
-			#fachada.cadastrarCliente(cliente)	
+			#fachada.cadastrarCliente(cliente)
 			return redirect('index')
 	else:
 		form = PessoaFisicaForm()

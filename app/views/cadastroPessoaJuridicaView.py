@@ -11,10 +11,8 @@ def cadastrarPessoaJuridica(request):
 		form = PessoaJuridicaForm(request.POST)
 		if form.is_valid():
 			cliente = form.save(commit = False)
-			print("SALVAR")
-			print(cliente.nome)
-			#fachada = Fachada()
-			#fachada.cadastrarCliente(cliente)	
+			fachada = Fachada()
+			fachada.cadastrarCliente(cliente)	
 			return redirect('index')
 	else:
 		form = PessoaJuridicaForm()

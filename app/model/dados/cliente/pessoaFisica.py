@@ -6,3 +6,6 @@ class PessoaFisica(Cliente):
 	rg = models.CharField(max_length=7)
 	dataNascimento = models.DateField()
 	sexo = models.CharField(max_length=1)
+
+	class Meta:
+   		db_table = "pessoaFisica"
