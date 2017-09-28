@@ -7,7 +7,6 @@ class Fachada(object):
 		self.controladorCliente = ControladorCliente()
 
 	def cadastrarCliente(self, cliente):
-		print("Fachada " + cliente.nome)
 		self.controladorCliente.cadastrarCliente(cliente)
 		
 
