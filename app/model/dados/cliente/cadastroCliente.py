@@ -1,11 +1,11 @@
-from .repClienteBD import RepClienteBD
+from app.model.dados.repAbstractFactory import RepAbstractFactory
 
 class CadastroCliente(object):
 	
-	repClienteBD = None
+	iRepCliente = None
 
 	def __init__(self):
-		self.repClienteBD = RepClienteBD()
+		self.iRepCliente = RepAbstractFactory.obterFactory("BD").criarRepCliente()
 
 	def inserir(self, cliente):		
-		self.repClienteBD.inserir(cliente)
+		self.iRepCliente.inserir(cliente)

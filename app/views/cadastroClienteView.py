@@ -30,3 +30,7 @@ def cadastrarCliente(request):
 	else:
 		form = ClienteForm()
 		return render(request, 'app/cadastroClienteTela.html',{'form': form})
+
+def cadastrarEndereco(request,  clienteArg):
+	print("chegou")
+	return render(request, 'app/index.html')

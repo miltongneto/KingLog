@@ -11,4 +11,5 @@ urlpatterns = [
 	url(r'^CadastrarCliente/$', cadastroClienteView.cadastrarCliente, name='cadastroCliente'),
 	url(r'^CadastrarCliente/PessoaJuridica/$', cadastroPessoaJuridicaView.cadastrarPessoaJuridica, name='cadastroPessoaJuridica'),
 	url(r'^CadastrarCliente/PessoaFisica/$', cadastroPessoaFisicaView.cadastrarPessoaFisica, name='cadastroPessoaFisica'),
+	url(r'^CadastrarCliente/Endereco/$', cadastroClienteView.cadastrarEndereco, name='cadastroEndereco'),
 	]

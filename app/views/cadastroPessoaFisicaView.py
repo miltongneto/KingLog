@@ -14,6 +14,7 @@ def cadastrarPessoaFisica(request):
 			fachada = Fachada()
 			fachada.cadastrarCliente(cliente)
 			return redirect('index')
+			#return redirect('cadastroEndereco', kwargs={'clienteArg': "clienteTeste"} )
 	else:
 		form = PessoaFisicaForm()
 		return render(request, 'app/cadastroPessoaFisicaTela.html',{'form': form})
