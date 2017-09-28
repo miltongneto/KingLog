@@ -16,7 +16,7 @@ class PessoaJuridicaForm(forms.ModelForm):
 
 	class Meta:
 		model = PessoaJuridica
-		fields = ('nome', 'email', 'telefone', 'cnpj', 'razaoSocial', 'razaoSocial')
+		fields = ('nome', 'email', 'telefone', 'cnpj', 'razaoSocial', 'nomeFantasia')
 
 class PessoaFisicaForm(forms.ModelForm):
 
