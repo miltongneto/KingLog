@@ -8,13 +8,23 @@
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 	<body>
-		<h1>Cadastrar Cliente</h1>
-		<br/>
+		<div id="list" >
+			<ul id="barraMenu">
+				<li class="menuItem"> <a href="{% url 'index' %}"> Home </a></li>
+				<li class="menuItem"> <a href="#"> Clientes </a></li >
+				<li class="menuItem"> <a href="#"> Motoristas </a></li >
+				<li class="menuItem"> <a href="#"> Pedidos </a></li > 
+			</ul>
+			<div class="qqcoisa" >
+				<h1>Cadastrar Cliente</h1>
+				<br/>
 
-		<form method="POST">{% csrf_token %}
-			{{ form.as_p }}
-			<button type="submit">Avançar</button>
-		</form>
+				<form method="POST">{% csrf_token %}
+					{{ form.as_p }}
+					<button type="submit">Avançar</button>
+				</form>
+			</div>
+		</div>
 
 	</body>
 

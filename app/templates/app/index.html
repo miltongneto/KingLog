@@ -1,11 +1,26 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-</head>
-
+  {% block title %}<title>KingLog Gerenciamento de Transportes</title>{% endblock %}
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 <body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+	<div id="list" >
+
+		<ul id="barraMenu">
+			<li class="menuItem"> <a href="#"> Home </a></li>
+			<li class="menuItem"> <a href="{% url 'cadastroCliente' %}"> Clientes </a></li >
+			<li class="menuItem"> <a href="#"> Motoristas </a></li >
+			<li class="menuItem"> <a href="#"> Pedidos </a></li > 
+		</ul>
+		<div class="qqcoisa">
+			<h1>KingLog Gerenciamento de Transportes</h1>
+				<br/>
+		</div>
+	</div >
+ 
 </body>
 </html>

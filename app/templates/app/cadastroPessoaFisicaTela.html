@@ -8,14 +8,24 @@
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 	<body>
-		<h1>Cadastrar pessoa física</h1>
-		<br/>
+		<div id="list" >
 
-		<form method="POST">{% csrf_token %}
-			{{ form.as_p }}
-			<button type="submit">Cadastrar</button>
-		</form>
+			<ul id="barraMenu">
+				<li class="menuItem"> <a href="{% url 'index' %}"> Home </a></li>
+				<li class="menuItem"> <a href="{% url 'cadastroCliente' %}"> Clientes </a></li >
+				<li class="menuItem"> <a href="#"> Motoristas </a></li >
+				<li class="menuItem"> <a href="#"> Pedidos </a></li > 
+			</ul>
+			<div class="qqcoisa">
+				<h1>Cadastrar pessoa física</h1>
+				<br/>
 
+				<form method="POST">{% csrf_token %}
+					{{ form.as_p }}
+					<button type="submit">Cadastrar</button>
+				</form>
+			</div>
+		</div>
 	</body>
 
 </html>
